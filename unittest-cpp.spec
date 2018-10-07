@@ -56,6 +56,24 @@ export CXX=g++
 
 cp -p %{SOURCE1} .
 
+# autoreconf will complain about missing NEWS and README files
+
+touch NEWS
+
+ln README.md README
+
+# autoreconf will add a GPLv3 license text in COPYING
+
+ln LICENSE COPYING
+
+autoreconf -i
+
+# upstream https://github.com/unittest-cpp/unittest-cpp/issues/105
+
+sed -i -e "s,pkgincludedir\ =\ \$(includedir)\/UnitTest++\/,pkgincludedir\ =\ \$(includedir)\/,g" Makefile.in
+
+
+
 %build
 %configure
 %make_build
