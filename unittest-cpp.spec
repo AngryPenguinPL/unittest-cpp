@@ -60,7 +60,7 @@ cp -p %{SOURCE1} .
 
 touch NEWS
 
-ln README.md README
+touch README
 
 # autoreconf will add a GPLv3 license text in COPYING
 
