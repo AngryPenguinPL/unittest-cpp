@@ -1,10 +1,10 @@
-%define major	2
+%define major	1
 %define libname	%mklibname %{name} %{major}
 %define devname	%mklibname %{name} -d
-%define abi 2.0.0
+%define abi 1.6.1
 
 Name:		unittest-cpp
-Version:	2.0.0
+Version:	1.6.1
 Release:	1
 Summary:	Lightweight unit testing framework for C++
 License:	MIT
