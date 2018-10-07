@@ -64,7 +64,7 @@ touch README
 
 # autoreconf will add a GPLv3 license text in COPYING
 
-ln LICENSE COPYING
+#ln LICENSE COPYING
 
 autoreconf -i
 
